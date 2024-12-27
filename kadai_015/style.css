@@ -1,0 +1,48 @@
+
+
+body {
+/* bodyのフォント種類を、「"Arial", "Meiryo", sans-serif」 にします。 */
+    font-family: "Arial", "Meiryo", sans-serif;
+
+    /* テキストは、全て中央寄せにしてください。 */
+    text-align: center;
+}
+
+/* ルート要素のフォントサイズを20pxにします。 */
+html {
+    font-size: 20px;
+}
+
+/* 「MY PROFILE」の「M」をスカイブルーに、「P」をピンクにしてください。 */
+.blue {
+    color: skyblue;
+}
+
+.pink {
+    color: rgb(255, 192, 203);
+}
+
+/* h1の装飾 */
+h1 {
+    /* h1のフォントには、Googleフォント「Josefin Sans」 を使用してください。 */
+    /* h1の総称フォントは、「sans-serif」 を使用してください。 */
+    font-family: "Josefin Sans", sans-serif;
+
+    /* h1のフォントサイズは、ルート要素の2倍になるようにしてください。 */
+    font-size: 200%;
+
+    /* h1の文字間は、文字の大きさに対して1.2倍になるようにしてください。 */
+    letter-spacing: 1.2em;
+
+    /* h1に影を付けてください。影の大きさや色は自由です。 */
+    text-shadow: 1px 1px 2px gray;
+
+    /* h1の下に3px（カラー：rgb(115, 115, 114)）の実線を付けてください。 */
+    border-bottom: solid 3px rgb(115, 115, 114);
+
+}
+
+/* 次に子孫要素の考え方を利用して、「侍太郎」「1990年1月1日」「O型」を太字にしてください。 */
+#basic p {
+    font-weight: bold;
+}
