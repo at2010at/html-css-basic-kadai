@@ -1,0 +1,118 @@
+/* Step3. スタイルの下準備 */
+h1, p, body {
+    /* h1、p、body要素の上下左右余白（margin）を0 */
+    margin: 0px;
+}
+
+p, a{
+    /* 記事内全てのp要素とa要素のフォントサイズを20px */
+    font-size: 20px;
+}
+
+/* Step4. header部分のスタイル */
+header {
+    /* 下の余白を20pxにします。 */
+    margin-bottom: 20px;
+    /* 背景色を「 rgb(244, 79, 79)」にします。 */
+    background-color: rgb(244, 79, 79);
+    /* 中の要素が中央揃えになるようにします。 */
+    text-align: center;
+}
+
+header > h1 {
+    /* 文字色をrgb(255, 255, 255)にします。 */
+    color: rgb(255,255,255);
+}
+
+/* Step5. main部分のスタイル */
+main {
+    /* main要素内の余白を上下左右とも10pxにします。 */
+    margin: 10px;
+}
+
+#parent {
+    /* displayプロパティを使い、id名parentの要素をFlexコンテナにします。 */
+    display: flex;
+    /* 一番左と一番右のアイテムも含め、均等な間隔で配置する */
+    justify-content: space-around;
+}
+
+.contents {
+    /* 線（太さ3px、実線、色rgb(238, 204, 204)）で要素を囲います。 */
+    border: 3px solid rgb(238, 204, 204);
+    /* 幅は親要素の25%にします。プロパティはwidthではなく、flex-basisを使ってください。 */
+    flex-basis: 25%;
+    /* 要素内の余白は上下10px、左右15pxにします。 */
+    padding: 10px 15px;
+    /* 要素外の余白は上下20px、左右0にします。 */
+    margin: 20px 0px;
+    /* 中の要素が中央揃えになるようにします。 */
+    text-align: center;
+}
+
+h2 {
+    /* h2要素のフォントサイズを25pxにし、下線（太さ3px、点線、色rgb(236, 122, 122)）を引きます。 */
+    font-size: 25px;
+    border-bottom: 3px dotted rgb(236, 122, 122);
+}
+
+h2::before {
+    /* h2要素の前に「●」記号を表示します。色はrgb(239, 111, 139)とします。 */
+    content:  "●";
+    color: rgb(239, 111, 139);
+}
+
+/* class名contents内の二番目のp要素内のテキストの中で一番目の文字 */
+.contents > p:nth-of-type(2)::first-letter {
+    font-weight: bold;
+    color: rgb(97, 206, 249);
+}
+
+/* class名contents内のimg要素に、以下のスタイルを設定します。 */
+.contents > img {
+    /* marginは上下10px、左右0 */
+    margin: 10px 0px;
+    /* 幅は70% */
+    width: 70%;
+}
+
+/* Step6. フッター部分のスタイル */
+footer {
+    /* 背景色はrgb(244, 79, 79)にします。 */
+    background-color: rgb(244, 79, 79);
+    /* 中身の要素が中央揃えになるようにします。 */
+    text-align: center;
+}
+
+a {
+    /* 文字色はrgb(255, 255, 255)にします。 */
+    color: rgb(255, 255, 255);
+}
+a:visited {
+    /* 訪問済みリンクの文字色がrgb(193, 234, 251)に変化するようにします。 */
+    color: rgb(193, 234, 251);
+}
+a:hover {
+    /* マウスカーソルが乗ると文字色がrgb(245, 178, 168)に変化するようにします。 */
+    color: rgb(245, 178, 168);
+}
+
+/* Step7. レスポンシブ対応のスタイル */
+/* 画面幅768px以下になったら表示が変わるようにブレークポイントを設定します。 */
+@media screen and (max-width: 768px) {
+    h2 {
+    /* h2のフォントサイズは30pxとします。 */
+        font-size: 30px;
+    }
+
+    p {
+    /* pのフォントサイズは25pxとします。 */
+        font-size:25px;
+    }
+
+    #parent {
+    /* Flexboxコンテナであるid名parent内の要素が縦に並ぶようにします。 */
+        display: block;
+    }
+}
+
